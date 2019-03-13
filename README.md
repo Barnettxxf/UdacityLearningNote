@@ -291,11 +291,11 @@
 
 #### 模型复杂度图表
 
-![](C:\Users\Barnett\Desktop\Udacity笔记\img\模型复杂度图表.png)
+![](.\img\模型复杂度图表.png)
 
 - 说明：
 
-  ![](C:\Users\Barnett\Desktop\Udacity笔记\img\模型复杂度图表example.png)
+  ![](.\img\模型复杂度图表example.png)
 
 
 
@@ -437,7 +437,7 @@
 
 ## 聚类分析过程
 
-![](C:\Users\Barnett\Desktop\Udacity笔记\img\聚类分析过程.png)
+![](.\img\聚类分析过程.png)
 
 - 数据集
 - 特征提取（对数据进行转换，以生成新的有用特征）/软聚类
@@ -458,7 +458,7 @@
 
 ##### 模型
 
-![](C:\Users\Barnett\Desktop\Udacity笔记\img\感知器模型.png)
+![](.\img\感知器模型.png)
 
 
 
@@ -990,7 +990,7 @@ components = ica.fit_transform(X)
 
 $E = -\frac{1}{m} \sum_{i=1}^m \left( y^{(i)} \ln(\hat{y^{(i)}}) + (1-y^{(i)}) \ln (1-\hat{y^{(i)}}) \right)$
 
-预测是$ \hat{y^{(i)}} = \sigma(Wx^{(i)} + b).​$
+预测是$ \hat{y^{(i)}} = \sigma(Wx^{(i)} + b).$
 
 我们的目标是计算 E,*, 在单个样本点 x 时的梯度（偏导数），其中 x 包含 n 个特征，即$x = (x_1, \ldots, x_n).$
 
@@ -1120,7 +1120,7 @@ model.fit(X, y, epochs=1000, verbose)
 score = model.evaluate(X, y)
 ```
 
-*补*：![](C:\Users\Barnett\Desktop\Udacity笔记\img\softmax和sigmoid的异同.png)
+*补*：![](.\img\softmax和sigmoid的异同.png)
 
 
 
@@ -1132,7 +1132,7 @@ score = model.evaluate(X, y)
 
 ##### 正则化
 
- ![](C:\Users\Barnett\Desktop\Udacity笔记\img\深度神经网络 - 正则化.png)
+ ![](.\img\深度神经网络 - 正则化.png)
 
 
 
@@ -1156,9 +1156,9 @@ score = model.evaluate(X, y)
 
   $\beta 动量，在(0, 1]中$
 
-  $STEP(n) -> STEP(n) +\beta STEP(n-1) +\beta STEP(n-2) + ...  $
+  $STEP(n) -> STEP(n) +\beta STEP(n-1) +\beta STEP(n-2) + ...  ​$
 
-  ![](C:\Users\Barnett\Desktop\Udacity笔记\img\深度学习 - 动量.png)
+  ![](.\img\深度学习 - 动量.png)
 
 ##### 
 
@@ -1325,19 +1325,19 @@ Conv2D(filters, kernel_size, strides, padding, activation='relu', input_shape)
 
   **不含最大池化层架构及参数：**
 
-  ![](C:\Users\Barnett\Desktop\Udacity笔记\img\图片分类CNN.png)
+  ![](.\img\图片分类CNN.png)
 
-  ![](C:\Users\Barnett\Desktop\Udacity笔记\img\不含最大池化层参数.png)
+  ![](.\img\不含最大池化层参数.png)
 
   **加入最大池化层架构和参数变化**：
 
-  ![](C:\Users\Barnett\Desktop\Udacity笔记\img\图片分类CNN_加入最大池化层架构.png)
+  ![](.\img\图片分类CNN_加入最大池化层架构.png)
 
 - 使用最后一层最大池化层，来采用全连接层，来进行预测
 
-  ![](C:\Users\Barnett\Desktop\Udacity笔记\img\CNN结果预测.png)
+  ![](.\img\CNN结果预测.png)
 
-  ![](C:\Users\Barnett\Desktop\Udacity笔记\img\CNN结果预测代码.png)
+  ![](.\img\CNN结果预测代码.png)
 
   
 
@@ -1606,7 +1606,7 @@ model.fit_generator(datagen_train.flow(x_train, y_train, batch_size=batch_size),
 
 - 设置
 
-![](C:\Users\Barnett\Desktop\Udacity笔记\img\强化学习_设置.png)
+![](.\img\强化学习_设置.png)
 
   		1. $S_0$表示在时间步0状态的状态
   		2. $A_0$表示在时间步0智能体做出的动作
@@ -1660,11 +1660,11 @@ model.fit_generator(datagen_train.flow(x_train, y_train, batch_size=batch_size),
 
 - MDP(Markov Decision Process马尔科夫决策法) Definition
 
-  ![](C:\Users\Barnett\Desktop\Udacity笔记\img\强化学习_MDP Definition.png)
+  ![](.\img\强化学习_MDP Definition.png)
 
 - 总结
 
-  ![强化学习_智能体和环境互动](C:\Users\Barnett\Desktop\Udacity笔记\img\强化学习_智能体和环境互动.png)
+  ![强化学习_智能体和环境互动](.\img\强化学习_智能体和环境互动.png)
 
 
 
@@ -1672,19 +1672,19 @@ model.fit_generator(datagen_train.flow(x_train, y_train, batch_size=batch_size),
 
 - 贝尔曼预期方程含义
 
-![](C:\Users\Barnett\Desktop\Udacity笔记\img\强化学习_Bellman Expectation Equation.png)
+![](.\img\强化学习_Bellman Expectation Equation.png)
 
 - 贝尔曼预期方程和MDP的差异
 
-![](C:\Users\Barnett\Desktop\Udacity笔记\img\强化学习_MDP和贝尔曼预期方程的差异.png)
+![](.\img\强化学习_MDP和贝尔曼预期方程的差异.png)
 
 - 不同策略的计算方法
 
-![](C:\Users\Barnett\Desktop\Udacity笔记\img\强化学习_不同策略的计算方法.png)
+![](.\img\强化学习_不同策略的计算方法.png)
 
 - 总结
 
 ![](C:\Users\Barnett\Desktop\Udacity笔记\img\强化学习_高尔夫智能体的状态值函数.png)
-![](C:\Users\Barnett\Desktop\Udacity笔记\img\强化学习_解决方案_0.png)
+![](.\img\强化学习_解决方案_0.png)
 
-![](C:\Users\Barnett\Desktop\Udacity笔记\img\强化学习_解决方案_1.png)
+![](.\img\强化学习_解决方案_1.png)

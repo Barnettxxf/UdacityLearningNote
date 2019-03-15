@@ -1609,9 +1609,9 @@ model.fit_generator(datagen_train.flow(x_train, y_train, batch_size=batch_size),
 ![](./img/强化学习_设置.png)
 
   		1. $S_0$表示在时间步0状态的状态
-    		2. $A_0$表示在时间步0智能体做出的动作
-      		3. 在$A_0$动作之后产生的在时间步1的状态$S_1$
-        		4. 在$A_0$动作产生的时间步1的奖励$R_1$
+        		2. $A_0$表示在时间步0智能体做出的动作
+            		3. 在$A_0$动作之后产生的在时间步1的状态$S_1$
+                		4. 在$A_0$动作产生的时间步1的奖励$R_1$
           		5. 以此类推$S_0, A_0, R_1, S_1, A_1, R_2, S_2, A_2, ... ,R_t, S_t, A_t$
 
 
@@ -1689,7 +1689,7 @@ model.fit_generator(datagen_train.flow(x_train, y_train, batch_size=batch_size),
 
 ![](./img/强化学习_解决方案_1.png)
 
-##### 动态规划
+#####   动态规划
 
 ![](./img/强化学习_动态规划_001.png)
 

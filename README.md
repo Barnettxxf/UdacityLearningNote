@@ -20,13 +20,13 @@
 
 
 
-#####Adaboost：
+##### Adaboost：
 
  * 来自 Schapire 很棒的[教程](https://s3.cn-north-1.amazonaws.com.cn/static-documents/nd101/MLND+documents/schapire.pdf)
  * 这是一篇由 Freund 和 Schapire 合著的原始[论文](https://cseweb.ucsd.edu/~yfreund/papers/IntroToBoosting.pdf)
  * 由 Freund 和 Schapire 合著的关于Adaboost几项实验的后续[论文](https://people.cs.pitt.edu/~milos/courses/cs2750/Readings/boosting.pdf)
 
-#####层次聚类
+##### 层次聚类
 
 - [Using Hierarchical Clustering of Secreted Protein Families to Classify and Rank Candidate Effectors of Rust Fungi](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0029847)
 
@@ -284,18 +284,18 @@
 
 ##### 正则化对比
 
- 	![](C:\Users\Barnett\Desktop\Udacity笔记\img\L1和L2正则化对比.png)
+ 	![](./img/L1和L2正则化对比.png)
 
 - L1：使用L1正则化时，我们希望得到稀疏向量，它表示较小权重趋向于0.所以你如果想降低权重值，最终得到较小的数，有利于模型选择
 - L2：不支持稀疏向量，因为他确保所有权重一致较小，这样一般可以训练模型，得到更好的结果
 
 #### 模型复杂度图表
 
-![](.\img\模型复杂度图表.png)
+![](./img/模型复杂度图表.png)
 
 - 说明：
 
-  ![](.\img\模型复杂度图表example.png)
+  ![](C:\Users\Barnett\Desktop\Udacity笔记\img\模型复杂度图表example.png)
 
 
 
@@ -437,7 +437,7 @@
 
 ## 聚类分析过程
 
-![](.\img\聚类分析过程.png)
+![](./img/聚类分析过程.png)
 
 - 数据集
 - 特征提取（对数据进行转换，以生成新的有用特征）/软聚类
@@ -458,13 +458,13 @@
 
 ##### 模型
 
-![](.\img\感知器模型.png)
+![](./img/感知器模型.png)
 
 
 
 
 
-#####算法流程：
+##### 算法流程：
 
 感知器步骤如下所示。对于坐标轴为$ (p,q) $的点，标签 y，以及等式 $\hat{y}$=step($w_{1}x_{1}+w_{2}x_{2}+b$) 给出的预测
 
@@ -474,23 +474,23 @@
 
 - 如果点分类为负，但是标签为正，则分别将 $\alpha p, \alpha q,αp,αq, 和 \alpha$ 加到 $w_1, w_2,w_1,w_2,和 b 上。$(**即低于于分类线的错误分类点加更新**)
 
-  ​
+  
 
 ## 决策树算法
 
 
 
-#####熵的计算一般公式（只有两个类别，数量分别为$m, n$）：
+##### 熵的计算一般公式（只有两个类别，数量分别为$m, n$）：
 
 ​	$Entropy=\frac{m}{m-n}log_2(\frac{m}{m+m})-\frac{n}{m+n}log_2(\frac{n}{m+n})$
 
-#####推广公式：
+##### 推广公式：
 
 ​	$H=-\sum\limits_{i=1}^np(x_i)log_2p(x_i)$  ------ $n$是分类的数目,$p(x_i)$是某个类别出现的概率
 
 
 
-#####条件熵：
+##### 条件熵：
 
 ​	$H(Y|X)=\sum\limits_{i=1}^np_iH(Y|X=x_i)​$
 
@@ -498,25 +498,25 @@
 
 
 
-#####信息增益：
+##### 信息增益：
 
 ​	分类前的熵和分类后的熵均值的差，为信息增益。
 
 ​	$g(D, A) = H(D) - H(D|A)$
 
-#####信息增益比：
+##### 信息增益比：
 
 ​	特征$A$对训练数据集$D$的信息增益$g_R(D,A)$，定义为其信息增益$g(D,A)$与训练集D的经验熵$H(D)$之比。
 
 ​	$g_R(D,A)=g(D,A)/H(D)$
 
-#####信息增益最大化
+##### 信息增益最大化
 
 ​	分类前后信息增益最大的分类方法
 
 
 
-#####决策树的超参数
+##### 决策树的超参数
 
 - 最大深度（max_depth）
 - 每片叶子的最小样本数（min_samples_leaf）
@@ -525,7 +525,7 @@
 
 
 
-#####ID3算法
+##### ID3算法
 
 > ID3算法就是用信息增益大小来判断当前节点应该用什么特征来构建决策树，用计算出的信息增益最大的特征来建立决策树的当前节点。
 >
@@ -544,7 +544,7 @@
 
 
 
-#####C4.5算法（ID3的改良）
+##### C4.5算法（ID3的改良）
 
 > 对于**第一个问题**，不能处理连续特征， C4.5的思路是将连续的特征离散化。 
 > 对于**第二个问题**，信息增益作为标准容易偏向于取值较多的特征的问题。引入信息增益比
@@ -990,7 +990,7 @@ components = ica.fit_transform(X)
 
 $E = -\frac{1}{m} \sum_{i=1}^m \left( y^{(i)} \ln(\hat{y^{(i)}}) + (1-y^{(i)}) \ln (1-\hat{y^{(i)}}) \right)$
 
-预测是$ \hat{y^{(i)}} = \sigma(Wx^{(i)} + b).$
+预测是$ \hat{y^{(i)}} = \sigma(Wx^{(i)} + b).​$
 
 我们的目标是计算 E,*, 在单个样本点 x 时的梯度（偏导数），其中 x 包含 n 个特征，即$x = (x_1, \ldots, x_n).$
 
@@ -1056,7 +1056,7 @@ $\nabla E(W,b) = -(y - \hat{y}) (x_1, \ldots, x_n, 1)$
 
  - 前向反馈是神经网络用来将输入变成输出的流程
  - 误差函数
-    - ![](C:\Users\Barnett\Desktop\Udacity笔记\img\深度升级网络-前向传播-误差函数.png)
+    - ![](.\img\深度升级网络-前向传播-误差函数.png)
 
 ##### 反向传播
 
@@ -1120,7 +1120,7 @@ model.fit(X, y, epochs=1000, verbose)
 score = model.evaluate(X, y)
 ```
 
-*补*：![](.\img\softmax和sigmoid的异同.png)
+*补*：![](./img/softmax和sigmoid的异同.png)
 
 
 
@@ -1132,7 +1132,7 @@ score = model.evaluate(X, y)
 
 ##### 正则化
 
- ![](.\img\深度神经网络 - 正则化.png)
+ ![](./img/深度神经网络 - 正则化.png)
 
 
 
@@ -1156,11 +1156,11 @@ score = model.evaluate(X, y)
 
   $\beta 动量，在(0, 1]中$
 
-  $STEP(n) -> STEP(n) +\beta STEP(n-1) +\beta STEP(n-2) + ...  ​$
+  $STEP(n) -> STEP(n) +\beta STEP(n-1) +\beta STEP(n-2) + ...  $
 
-  ![](.\img\深度学习 - 动量.png)
+  ![](./img/深度学习 - 动量.png)
 
-##### 
+
 
 ##### 何时效果不错
 
@@ -1284,7 +1284,7 @@ Conv2D(filters, kernel_size, strides, padding, activation='relu', input_shape)
 - **height** = ceil(float(`H_in` - `F` + 1) / float(`S`))
 - **width** = ceil(float(`W_in` - `F` + 1) / float(`S`))
 
-##### 
+
 
 ##### 池化层
 
@@ -1325,19 +1325,19 @@ Conv2D(filters, kernel_size, strides, padding, activation='relu', input_shape)
 
   **不含最大池化层架构及参数：**
 
-  ![](.\img\图片分类CNN.png)
+  ![](./img/图片分类CNN.png)
 
-  ![](.\img\不含最大池化层参数.png)
+  ![](./img/不含最大池化层参数.png)
 
   **加入最大池化层架构和参数变化**：
 
-  ![](.\img\图片分类CNN_加入最大池化层架构.png)
+  ![](./img/图片分类CNN_加入最大池化层架构.png)
 
 - 使用最后一层最大池化层，来采用全连接层，来进行预测
 
-  ![](.\img\CNN结果预测.png)
+  ![](./img/CNN结果预测.png)
 
-  ![](.\img\CNN结果预测代码.png)
+  ![](./img/CNN结果预测代码.png)
 
   
 
@@ -1606,13 +1606,13 @@ model.fit_generator(datagen_train.flow(x_train, y_train, batch_size=batch_size),
 
 - 设置
 
-![](.\img\强化学习_设置.png)
+![](./img/强化学习_设置.png)
 
   		1. $S_0$表示在时间步0状态的状态
-  		2. $A_0$表示在时间步0智能体做出的动作
-  		3. 在$A_0$动作之后产生的在时间步1的状态$S_1$
-  		4. 在$A_0$动作产生的时间步1的奖励$R_1$
-  		5. 以此类推$S_0, A_0, R_1, S_1, A_1, R_2, S_2, A_2, ... ,R_t, S_t, A_t$
+    		2. $A_0$表示在时间步0智能体做出的动作
+      		3. 在$A_0$动作之后产生的在时间步1的状态$S_1$
+        		4. 在$A_0$动作产生的时间步1的奖励$R_1$
+          		5. 以此类推$S_0, A_0, R_1, S_1, A_1, R_2, S_2, A_2, ... ,R_t, S_t, A_t$
 
 
 
@@ -1660,11 +1660,11 @@ model.fit_generator(datagen_train.flow(x_train, y_train, batch_size=batch_size),
 
 - MDP(Markov Decision Process马尔科夫决策法) Definition
 
-  ![](.\img\强化学习_MDP Definition.png)
+  ![](./img/强化学习_MDP Definition.png)
 
 - 总结
 
-  ![强化学习_智能体和环境互动](.\img\强化学习_智能体和环境互动.png)
+  ![强化学习_智能体和环境互动](./img/强化学习_智能体和环境互动.png)
 
 
 
@@ -1672,19 +1672,37 @@ model.fit_generator(datagen_train.flow(x_train, y_train, batch_size=batch_size),
 
 - 贝尔曼预期方程含义
 
-![](.\img\强化学习_Bellman Expectation Equation.png)
+![](./img/强化学习_Bellman Expectation Equation.png)
 
 - 贝尔曼预期方程和MDP的差异
 
-![](.\img\强化学习_MDP和贝尔曼预期方程的差异.png)
+![](./img/强化学习_MDP和贝尔曼预期方程的差异.png)
 
 - 不同策略的计算方法
 
-![](.\img\强化学习_不同策略的计算方法.png)
+![](./img/强化学习_不同策略的计算方法.png)
 
 - 总结
 
-![](C:\Users\Barnett\Desktop\Udacity笔记\img\强化学习_高尔夫智能体的状态值函数.png)
-![](.\img\强化学习_解决方案_0.png)
+![](./img/强化学习_高尔夫智能体的状态值函数.png)
+![](./img/强化学习_解决方案_0.png)
 
-![](.\img\强化学习_解决方案_1.png)
+![](./img/强化学习_解决方案_1.png)
+
+##### 动态规划
+
+![](./img/强化学习_动态规划_001.png)
+
+![](./img/强化学习_动态规划_002.png)
+
+![](./img/强化学习_动态规划_003.png)
+
+
+![](./img/强化学习_动态规划_004.png)
+
+![](./img/强化学习_动态规划_005.png)
+
+
+
+
+
